@@ -30,7 +30,7 @@ In addition to that it is possible to specify a bindings file via the
                           :binding "xsd/first-binding.jxb"}]}
 ...
 ```
-Or, mutliplie bindings for one call by using the `:bindings` keyword:
+Or, multiple bindings for one call by using the `:bindings` keyword:
 
 ```clojure
 ...
