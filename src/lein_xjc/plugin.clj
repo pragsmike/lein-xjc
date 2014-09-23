@@ -13,7 +13,7 @@
             (if (contains? xjc-call k)
               (into argv (f (get xjc-call k)))
               argv))]
-    (-> ["-extension" "-d" target-dir]
+    (-> ["-extension" "-disableXmlSecurity" "-d" target-dir]
       (append-opt :binding #(list "-b" (prepend-root %)))
       (append-opt :bindings (fn [bs] (mapcat #(list "-b" (prepend-root %)) bs)))
       (append-opt :xsd-file #(list (prepend-root %)))
@@ -29,6 +29,7 @@
 
 (defn xjc-main
   [argv]
+  (System/setProperty "javax.xml.accessExternalSchema" "all")
   (Driver/run (into-array String argv) (System/out) (System/err)))
 
 (defn call-xjc
