@@ -1,4 +1,4 @@
-(defproject pragsmike/lein-xjc "0.2.0-SNAPSHOT"
+(defproject pragsmike/lein-xjc "0.2.0"
   :description "Call xjc from leiningen."
   :url "https://github.com/pragsmike/lein-xjc"
   :scm {:name "git"
